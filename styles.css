@@ -9,7 +9,7 @@ body {
     position: relative;
     text-align: center;
     min-height: 100vh;
-    background-image: url("/Images/StarWars2.jpg");
+    background-image: url("./Images/StarWars2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
