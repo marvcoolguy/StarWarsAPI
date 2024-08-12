@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0
+    ,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Utilities/styles.css">
     <title>StarWarsAPI</title>
 </head>
 <body>
     <div class="header">
-        <h1>Random Starwars Character Generator</h1>
+        <header>
+            <h2>Star-Wars Film Generator</h2>
+            <nav class="navigation">
+                <a href="/Main/index.html">Home</a>
+                <a href="/Films/films.html">Films</a>
+                <a href="/People/people.html">People</a>
+                <a href="/Planets/planets.html">Planets</a>
+                <a href="/Species/species.html">Species</a>
+                <a href="/StarShips/starships.html">StarShips</a>
+            </nav>
+        </header>
     </div>
     <div class="button">
-        <button id="btn">Randomize!</button>
+        <button id="btn">Generate!</button>
     </div>
     <div class="showcase">
         <div class="card">
-            <h2 id="name"></h2>
+            <h2 id="title"></h2>
             <h2 id="id"></h2>
-            <h2 id="height"></h2>
-            <h2 id="mass"></h2>
-            <h2 id="gender"></h2>
-            <h2 id="hair_color"></h2>
-            <h2 id="eye_color"></h2>
-            <h2 id="skin_color"></h2>
-            <h2 id="birth_year"></h2>
+            <h2 id="episode_id"></h2>
+            <h2 id="opening_crawl"></h2>
+            <h2 id="director"></h2>
+            <h2 id="producer"></h2>
+            <h2 id="release_date"></h2>
         </div>
     </div>
     <script src="films.js"></script>

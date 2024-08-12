@@ -6,8 +6,12 @@
 }
 
 body {
-    position: relative;
-    text-align: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
     min-height: 100vh;
     background-image: url("/Images/StarWars2.jpg");
     background-repeat: no-repeat;
@@ -34,8 +38,8 @@ h2 {
     color: #fff;
     user-select: none;
     animation-name: head;
-    animation-duration: 1.99s;
-    animation-timing-function: ease-out;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
 }
 
 .navigation a {
@@ -71,61 +75,43 @@ h2 {
     transform: scaleX(1);
 }
 
-.button {
-    position: relative;
-    margin-top: 20vh;
-    animation-name: left;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-}
-
-button {
-    padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-    transition: all ease .5s;
-}
-
-button:hover {
-    transform: scale(0.98);
-    transform: rotateY(360deg);
-}
-
 .showcase {
-    opacity: 0;
-    width: 100%;
+    left: 100px;
+    position: absolute;
+    top: 100px;
+    color: white;
+    width: 80vh;
+    width: 400px;
+    height: 250px;
     margin-top: 80px;
-    animation-name: opacity;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(1rem);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    background-color: hsla(0, 0%, 0%, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.showcase.active {
+    animation-name: load;
     animation-duration: 2s;
-    animation-delay: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
 }
 
-.card {
-    padding-left: 20px;
-    text-align: left;
-    width: 50%;
-    border-radius: 20px;
-    height: 100%;
-    background-color: orange;
-    display: inline-block;
-    transition: height ease 2s;
+h1 {
+    margin-bottom: 20px;
 }
 
-h2 {
-    margin: 6px;
-}
-
-
-@keyframes opacity {
+@keyframes load {
     0% {
-        opacity: 0;
+        left: -500px;
     }
     100% {
-        opacity: 1;
+        left: 100px;
     }
 }
 
@@ -137,16 +123,6 @@ h2 {
         right: 0;
     }
 }
-
-@keyframes left {
-    0% {
-        left: -1100px;
-    }
-    100% {
-       left: 0;
-    }
-}
-
 
 @keyframes head {
     0% {
@@ -161,8 +137,4 @@ h2 {
         top: 0;
         left: 0;
     }
-}
-
-@media screen {
-    
 }
