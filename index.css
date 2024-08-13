@@ -13,7 +13,7 @@ body {
     align-items: left;
     justify-content: center;
     min-height: 100vh;
-    background-image: url("./Images/StarWars2.jpg");
+    background-image: url("./img/StarWars2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
