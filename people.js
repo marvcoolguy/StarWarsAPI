@@ -11,7 +11,7 @@ let mass = document.getElementById("mass");
 let button = document.getElementById("btn").addEventListener("click", api);
 function api() {
     let num = Math.ceil(Math.random() * 83)
-    fetch(`https://swapi.info/api/people${num}`)
+    fetch(`https://swapi.info/api/people/${num}`)
       .then(response => response.json())
       .then(data => {
         name.innerHTML =`Name: ${data["name"]}`;
