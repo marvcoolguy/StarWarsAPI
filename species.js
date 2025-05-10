@@ -11,7 +11,7 @@ let average_height = document.getElementById("average_height");
 let button = document.getElementById("btn").addEventListener("click", api);
 function api() {
     let num = Math.ceil(Math.random() * 37)
-    fetch(`https://swapi.info/api/species${num}`)
+    fetch(`https://swapi.info/api/species/${num}`)
       .then(response => response.json())
       .then(data => {
         name.innerHTML =`Name: ${data["name"]}`;
