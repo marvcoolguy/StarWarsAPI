@@ -10,7 +10,7 @@ let population = document.getElementById("population");
 let button = document.getElementById("btn").addEventListener("click", api)
 function api() {
     let num = Math.ceil(Math.random() * 60)
-    fetch(`https://swapi.dev/api/planets/${num}`)
+    fetch(`https://swapi.info/api/planets${num}`)
       .then(response => response.json())
       .then(data => {
         name.innerHTML =`Name: ${data["name"]}`;
