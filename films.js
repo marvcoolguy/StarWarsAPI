@@ -9,7 +9,7 @@ let director = document.getElementById("director");
 let button = document.getElementById("btn").addEventListener("click", api);
 function api() {
     let num = Math.ceil(Math.random() * 6)
-    fetch(`https://swapi.info/api/films${num}`)
+    fetch(`https://swapi.info/api/films/${num}`)
       .then(response => response.json())
       .then(data => {
         title.innerHTML =`Title: ${data["title"]}`;
