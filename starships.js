@@ -11,7 +11,7 @@ let cargo_capacity = document.getElementById("cargo_capacity");
 let button = document.getElementById("btn").addEventListener("click", api);
 function api() {
     let num = Math.ceil(Math.random() * 36)
-    fetch(`https://swapi.dev/api/starships/${num + 2}`)
+    fetch(`https://swapi.info/api/starships${num + 2}`)
       .then(response => response.json())
       .then(data => {
         name.innerHTML =`Name: ${data["name"]}`;
